@@ -13,9 +13,6 @@ public class Main {
         
         System.out.println("Top scorers");
         for (Player player : stats.topScorers(10) ) {
-          for(i=0;i<10;i++){
-              System.out.println(i);
-          }
             System.out.println( player );
         }        
     }
