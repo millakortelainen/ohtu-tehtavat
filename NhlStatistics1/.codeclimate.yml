@@ -2,4 +2,4 @@ plugins:
   checkstyle:
     enabled: true
     config:
-      file: "/home/kortemil/ohtu2019/ohtu-tehtavat/NhlStatistics1/config/checkstyle/checkstyle.xml"
+      file: "**/NhlStatistics1/config/checkstyle/checkstyle.xml"
