@@ -10,7 +10,7 @@ public class Statistics {
     private List<Player> players;
 
     public Statistics(Reader reader) {
-                          players = reader.getPlayers();
+        players = reader.getPlayers();
     }
 
     public Player search(String name) {
