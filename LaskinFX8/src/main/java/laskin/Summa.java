@@ -19,6 +19,7 @@ public class Summa implements Komento {
     Button nollaa;
     Button undo;
     Sovelluslogiikka sovellus;
+    int syote;
 
     public Summa(TextField tuloskentta, TextField syotekentta, Button nollaa, Button undo, Sovelluslogiikka sovellus) {
         this.sovellus = sovellus;
@@ -26,17 +27,19 @@ public class Summa implements Komento {
         this.syotekentta = syotekentta;
         this.nollaa = nollaa;
         this.undo = undo;
+        this.syote = 0;
     }
 
     @Override
     public void peru() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.sovellus.miinus(syote);
+        this.tuloskentta.setText(this.sovellus.tulos() + "");
     }
 
     @Override
     public void suorita() {
-        int syote = Integer.parseInt(this.syotekentta.getText());
+        syote = Integer.parseInt(this.syotekentta.getText());
         this.sovellus.plus(syote);
-        this.tuloskentta.setText(this.sovellus.tulos()+"");
+        this.tuloskentta.setText(this.sovellus.tulos() + "");
     }
 }
